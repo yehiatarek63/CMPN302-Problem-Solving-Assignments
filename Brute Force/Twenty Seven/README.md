@@ -1,42 +1,20 @@
-Given a 2D matrix of integers of size N*M, it is required to find the maximum number of cells that sum to 0 and do not have any duplicates. Solve this problem using a recursive brute force solution.
-
-Note:
-
-There is no specific set of movement directions for that problem, because any subset of cells is allowed. This is a simple include-exclude problem.
+Given 5 numbers, find out if you can place the arithmetic operators {+, −, ∗} between them to create an arithmetic expression yielding to the value 27. Note that you can arrange the number in any arrangement(Hint: use next_permutation) so if the numbers given are 1 2 3 4 5 you can place the operators 1 + 2 + 3 * 4 - 5 or 5 * 2 + 3 - 1 * 4 also consider the +, -, * have the same precedence so just consider the calculation in a sequential way. for example here 1 + 2 + 3 * 4 - 5 --> ((((1 + 2) + 3) * 4) - 5) so you will do the first addition and then the second, then the multiplication then the subtraction so don't consider the * to have higher precedence. Solve this problem using a recursive brute force solution.
 
 Input Format
 
-one line containing N and M, space separated
-the next N lines, each line contains M space separated numbers
+The Input consists of 5 of positive Integers, each between 1 and 50.
+
 Constraints
 
-N is from 1 to 4
-M is from 1 to 4
-cell values are from -10^9 to 10^9
+see input format
+
 Output Format
 
-one line containing the maximum number of cells that sum to 0 and do not have any duplicates
+Print ‘Possible’ (without quotes) if there exists an arithmetic expression, Otherwise print ‘Impossible’
+
 Sample Input 0
 
-3 3
-3 -3 4
-2 2 0
-7 -2 -2
+42 8 2 32 37
 Sample Output 0
 
-5
-Explanation 0
-
-The cells are: 3, -3, 2, 0, -2. Note that we cannot add the other 2, -2 because the chosen cells will be containing duplicates.
-
-Sample Input 1
-
-2 3
--3 0 3 
-2 1 0
-Sample Output 1
-
-4
-Explanation 1
-
-The cells: -3, 0, 2, 1. Note that -3, 0, 3 sum to zero but the length is 3 (less than 4). Note also that we cannot add the other 0 because of the duplicates condition.
+Possible
